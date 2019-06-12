@@ -1,0 +1,10 @@
+dict:
+  pw1:
+    username: user
+    password: redhat
+  pw2:
+    username: user
+    password: redhat0
+  pw3:
+    username: user
+    password: redhat1
