@@ -1,0 +1,9 @@
+- ping:
+  ignore_unreachable: yes
+  ignore_errors: yes
+  register: ping_result
+
+- set_fact:
+    ansible_user: "{{ item.value.username }}"
+    ansible_password: "{{ item.value.password }}"
+  when: "ping_result.ping is not defined"
