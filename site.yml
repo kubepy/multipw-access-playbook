@@ -5,12 +5,13 @@
   tasks:
     - name: Setup ansible_user & ansible_password for the target hosts
       include: setup_user_pw.yml
-      with_dict: "{{ dict }}"
+      with_dict: "{{ userlogin }}"
 
 - hosts: all
-  gather_facts: false
+  gather_facts: true
   tasks:
     - shell: hostname
       register: hostname_result
+      changed_when: false
     - debug:
         msg: "{{ hostname_result.stdout }}"
