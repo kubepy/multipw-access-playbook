@@ -1,4 +1,4 @@
-dict:
+userlogin:
   pw1:
     username: user
     password: redhat
